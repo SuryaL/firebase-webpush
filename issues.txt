@@ -1,0 +1,2 @@
+SAFARI - Messaging: This browser doesn't support the API's required to use the firebase SDK. (messaging/unsupported-browser).
+SERVER_KEY='AAAAykNJtw8:APA91bEPBF7l_sSJJQL4W3pSTdIkBjO-jXmBo-YM_hWdjX6TMjELEkMFmTGOExHj2MbvdO0_pUJdxQkEdv6UpfJ3fdNLH6g-ZRlzgfcPebrsdYn2Fmp040JhKvDmHzdNjxweDP_Hq-rW'
