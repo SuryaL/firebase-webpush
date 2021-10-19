@@ -38,14 +38,24 @@
       firebase.initializeApp(firebaseConfig);
 
       const messaging = firebase.messaging();
+
       messaging
         .requestPermission()
+
         .then(function () {
           MsgElem.innerHTML = 'Notification permission granted.';
           console.log('Notification permission granted.');
 
           // get the token in the form of promise
-          return messaging.getToken();
+          return navigator.serviceWorker.register('./fb-sw.js');
+        })
+        .then((registration) => {
+          //  messaging.useServiceWorker(registration);
+          return messaging.getToken({
+            serviceWorkerRegistration: registration,
+            vapidKey:
+              'BCH4eaojKQFMXX_y8SCIv6E3jY0CLH5z7v1A2VTHinWHUpYgc5nUfrg2qGZRBof4xQ327wqUFUEyjfg26xAGp4M',
+          });
         })
         .then(function (token) {
           TokenElem.innerHTML = 'Device token is : <br>' + token;

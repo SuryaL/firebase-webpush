@@ -30,7 +30,7 @@ messaging.setBackgroundMessageHandler(function (payload) {
   const notificationTitle = 'Background Message Title';
   const notificationOptions = {
     body: 'Background Message body.',
-    icon: '/itwonders-web-logo.png',
+    // icon: '/itwonders-web-logo.png',
   };
 
   return self.registration.showNotification(notificationTitle, notificationOptions);
